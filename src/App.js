@@ -56,7 +56,7 @@ const App = () => {
           <h1 align='center'><u>API Ecommerce app</u></h1>
         </header>
         <section>
-          <MenuItems username={username = username} />
+          <MenuItems username={usercred === "M1" ? "Meeket" : "User"} />
         </section>
         <section className='menu_items'>
             <Routes>
