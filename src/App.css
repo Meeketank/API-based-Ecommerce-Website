@@ -1,0 +1,149 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.usericon{
+  width: 50px;
+  height: 50px;
+  margin-top: 25px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.banner{
+  width: 100%;
+}
+
+.item{
+  height: 200px;
+  width: 200px;
+}
+
+.Product_List{
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.Products_Card{
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 3px solid seagreen;
+  padding: 10px;
+}
+
+.product-detail{margin: 40px;}
+
+.addtocart{
+  color: white;
+  background-color: black;
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.showdescription{
+  color: white;
+  background-color: black;
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.menu_items{
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  justify-content: center;
+}
+
+.footer{
+  border-top: 3px solid hotpink
+}
+
+a{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+
+.menu-items-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222; /* optional background */
+}
+
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.menu-item:hover {
+  color: hotpink; /* highlight on hover */
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.username {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.returntext{
+  color: blue;
+}
