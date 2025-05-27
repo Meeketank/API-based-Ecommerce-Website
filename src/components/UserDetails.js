@@ -15,8 +15,8 @@ const UserDetails = ({ username }) => {
     <div>
       <h1>User Details</h1>
       <h2>Welcome {username}</h2>
-      <button style={{ margin: 30, padding: 5 }} onClick={handle_login}>
-        Login
+      <button style={{ margin: 30, padding: 5 }} onClick={handle_login} className="submitbuttonform">
+        <h3 style={{margin: 10}}>Login</h3>
       </button>
     </div>
   );
