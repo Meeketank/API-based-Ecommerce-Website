@@ -1,8 +1,13 @@
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 export const Cart = ({ items }) => {
-  // counts will hold counts per itemId, e.g. { 1: 2, 2: 1 }
   const [counts, setCounts] = useState({});
+
+  const navigate = useNavigate();
+  function CheckoutPage(){
+    navigate("/CheckoutPage");
+  }
 
   const increment = (id) => {
     setCounts(prev => ({
@@ -27,7 +32,6 @@ export const Cart = ({ items }) => {
 
   const removeItem = (id) => {
     alert("Sorry for the inconvenience, app is in maintenance");
-    // You can later implement actual remove logic here
   };
 
   if (!items || items.length === 0) {
@@ -35,6 +39,8 @@ export const Cart = ({ items }) => {
   }
 
   return (
+    <>
+    <div>
     <div>
       <h2>Your Cart</h2>
       {items.map(item => (
@@ -66,5 +72,10 @@ export const Cart = ({ items }) => {
         </div>
       ))}
     </div>
+    <div style={{marginTop:100}}>
+        <Link className="cartButton" to = "/CheckoutPage">Checkout</Link>
+    </div>
+    </div>
+    </>
   );
 };

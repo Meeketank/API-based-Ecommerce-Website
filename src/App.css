@@ -167,6 +167,7 @@ a{
   width: auto;
   height: auto;
   background-color: darkslategray;
+  border-radius: 10;
   color: beige;
 }
 
@@ -188,4 +189,17 @@ a{
 
 .addrembut:hover {
   background-color: #f0f0f0;
+}
+
+.cartButton{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: auto;
+  height: auto;
+  background-color: #222;
+  border: 1px solid #222;
+  border-radius: 20;
+  color: beige;
 }
