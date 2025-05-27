@@ -147,3 +147,29 @@ a{
 .returntext{
   color: blue;
 }
+
+.inputbox{
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.submitbuttonform{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: max-content;
+  height: auto;
+  background-color: darkslategray;
+  color: beige;
+}
+
+.form{
+  margin: 10px;
+  background-color: #222;
+  color: beige;
+  padding: 50px;
+}

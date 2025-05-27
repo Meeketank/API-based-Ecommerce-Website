@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({
+    usercred,
+    setUsercred
+}) => {
 
-    const [usercred, setUsercred] = useState('');
+    // const [usercred, setUsercred] = useState('');
     const [message, setMessage] = useState('');
     const [username, setUsername] = useState('');
 

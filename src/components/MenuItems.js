@@ -1,8 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../App.css';
-import { Login } from "./Login";
+// import { Login } from "./Login";
+
 
 const MenuItems = ({username}) => {
+  const navigate = useNavigate();
+  const Validation = () => {
+    if(username === "User"){
+      alert("Login first");
+      navigate('/Login');
+    }
+    else{
+      navigate('/EditDetails');
+    }
+  };
+
+
     return(
         <div className="menu-items-container">
       <nav className="menu-links">
@@ -13,9 +26,9 @@ const MenuItems = ({username}) => {
       </nav>
       <div className="user-section">
         <Link to="/UserDetails">
-          <img src="/logo192.png" alt="User Icon" className="user-icon" />
+          <img src="/user.svg" alt="User Icon" className="user-icon" />
         </Link>
-        <p className="username">{username}</p>
+        <a className="username" onClick={Validation}><u>{username}</u></a>
       </div>
     </div>
     )

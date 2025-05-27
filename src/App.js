@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import { ProductDetail } from './components/ProductDetail';
 import {Cart} from './components/Cart';
 import {UserDetails} from './components/UserDetails';
+import { EditDetails } from './components/EditDetails';
 
 const App = () => {
   const [username, setUsername] = useState("User"); 
@@ -47,6 +48,11 @@ const App = () => {
   );
 };
 
+const FooterTab = ({username}) => {
+  return(
+    <h3 align = "center" style={{color: "hotpink"}}>Developed and managed by {username}</h3>
+  )
+}
 
   return (
     <>
@@ -78,13 +84,24 @@ const App = () => {
                 <Route path='About' element = {<About/>}/>
                 <Route path='ContactUs' element = {<ContactUs/>}/>
                 <Route path = 'UserDetails' element = {<UserDetails/>}/>
-                <Route path = 'Login' element = {<Login setUsername={setUsername}/>}/>
+                <Route path = 'EditDetails' element = {
+                  <EditDetails 
+                  setUsername = {setUsername}
+                  usercred = {usercred}
+                  setUsercred = {setUsercred}
+                  />}/>
+                <Route path = 'Login' element = {
+                  <Login 
+                  setUsername={setUsername}
+                  usercred={usercred}
+                  setUsercred={setUsercred}
+                />}/>
             </Routes>
         </section>
         </BrowserRouter>
       </div>
       <footer className='footer'>
-        <h3 align = "center" style={{color: "hotpink"}}>Developed and managed by {username}</h3>
+        <FooterTab username = {username}/>
       </footer>
     </>
   );
