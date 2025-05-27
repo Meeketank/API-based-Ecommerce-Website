@@ -92,6 +92,7 @@
 }
 
 .footer{
+  margin-top: 30px;
   border-top: 3px solid hotpink
 }
 
@@ -154,6 +155,8 @@ a{
   justify-content: center;
   height: auto;
   width: 100%;
+  background-color: beige;
+  border: 2px solid pink;
 }
 
 .submitbuttonform{
@@ -161,13 +164,14 @@ a{
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: max-content;
+  width: auto;
   height: auto;
   background-color: darkslategray;
   color: beige;
 }
 
 .form{
+  justify-content: center;
   margin: 10px;
   background-color: #222;
   color: beige;

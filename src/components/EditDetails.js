@@ -24,7 +24,7 @@ const EditDetails = ({username}) => {
     }
 
     const AddValid = () => {
-        return(address.length <10)
+        return(address.length < 10)
     }
     
     const SubValid = (page) => {
@@ -32,16 +32,19 @@ const EditDetails = ({username}) => {
         let warnings = [];
 
         if(!EmailValid()){
-            warnings.push("Email not in format")
+            warnings.push(<p>Email not in format</p>)
         }
         if(!PhoneValid()){
-            warnings.push("Phone number should be only 10 digits \n")
+            warnings.push(<p>Phone number should be only 10 digits</p>)
         }
         if(!PinValid()){
-            warnings.push("Pincode should be just 6 digits \n")
+            warnings.push(<p>Pincode should be just 6 digits</p>)
         }
         if(!AddValid()){
-            warning.push("Enter your full address")
+            warnings.push(<p>Enter your full address</p>)
+        }
+        if(username === "User"){
+            warnings.push(<p>User not logged in</p>)
         }
 
         if(warnings.length === 0){
@@ -54,7 +57,7 @@ const EditDetails = ({username}) => {
             setAddress("");
         }
         else{
-            setWarning(warnings + "\n")
+            setWarning(<div style={{backgroundColor: "red", padding: 20, borderRadius: 25}}><h2><u>Warnings</u></h2><p>{warnings}</p></div>)
             setMessage("Invalid Inputs due to errors")
         }
     }
@@ -63,8 +66,10 @@ const EditDetails = ({username}) => {
         <>
         <form className="form">
             <h1 style = {{color: "beige", marginbottom:30}}><u>Address Form</u></h1>
-            <label className="formlabel">Name: </label>
-            <h3 className="inputbox" style = {{color:"beige"}}>{username}</h3>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", marginBottom: 20 }}>
+                <label style={{ marginRight: 10 }}>Name:</label>
+                <h3 style={{ color: "beige", margin: 0 }}>{username}</h3>
+            </div>
             <div>
                 <label className="formlabel">Email: </label>
                 <input type="text" onChange={(e) => setEmail(e.target.value)} className="inputbox" value={email}/>
@@ -81,7 +86,7 @@ const EditDetails = ({username}) => {
                 <label className="formlabel">Pincode: </label>
                 <input type="text" onChange={(e) => setPincode(e.target.value)} className="inputbox" value={pincode}/>
             </div>
-            <p style={{color: "pink"}}>{warning}</p>
+            <p style={{color: "beige"}}>{warning}</p>
             <button type="submit" onClick={SubValid} className = "submitbuttonform">SUBMIT</button>
             <p style = {{color: "pink"}}>{message}</p>
         </form>

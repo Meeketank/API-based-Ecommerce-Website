@@ -86,9 +86,7 @@ const FooterTab = ({username}) => {
                 <Route path = 'UserDetails' element = {<UserDetails/>}/>
                 <Route path = 'EditDetails' element = {
                   <EditDetails 
-                  setUsername = {setUsername}
-                  usercred = {usercred}
-                  setUsercred = {setUsercred}
+                  username={usercred === "M1" ? "Meeket" : "User"}
                   />}/>
                 <Route path = 'Login' element = {
                   <Login 
@@ -101,7 +99,7 @@ const FooterTab = ({username}) => {
         </BrowserRouter>
       </div>
       <footer className='footer'>
-        <FooterTab username = {username}/>
+        <FooterTab username={usercred === "M1" ? "Meeket" : "User"}/>
       </footer>
     </>
   );
