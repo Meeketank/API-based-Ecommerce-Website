@@ -13,6 +13,7 @@ import {Cart} from './components/Cart';
 import {UserDetails} from './components/UserDetails';
 import { EditDetails } from './components/EditDetails';
 import { CheckoutPage } from './components/CheckoutPage';
+import { Faqs } from './components/Faqs';
 
 const App = () => {
   const [username, setUsername] = useState("User"); 
@@ -91,6 +92,7 @@ const FooterTab = ({username}) => {
                 <Route path='ContactUs' element = {<ContactUs/>}/>
                 <Route path = 'UserDetails' element = {<UserDetails/>}/>
                 <Route path = 'CheckoutPage' element = {<CheckoutPage/>}/>
+                <Route path = 'Faqs' element = {<Faqs/>}/>
                 <Route path = 'EditDetails' element = {
                   <EditDetails 
                   username={usercred === "M1" ? "Meeket" : "User"}

@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import '../App.css';
-// import { Login } from "./Login";
 
 
 const MenuItems = ({username}) => {
@@ -23,6 +22,7 @@ const MenuItems = ({username}) => {
         <Link to="/Cart" className="menu-item">Cart</Link>
         <Link to="/About" className="menu-item">About</Link>
         <Link to="/ContactUs" className="menu-item">Contact Us</Link>
+        <Link to = "/Faqs" className="menu-item">FAQ's</Link>
       </nav>
       <div className="user-section">
         <Link to="/UserDetails">
