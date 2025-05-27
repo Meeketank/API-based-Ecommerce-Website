@@ -17,6 +17,7 @@ const App = () => {
   const [username, setUsername] = useState("User"); 
   const [usercred, setUsercred] = useState('');
   const [data, setData] = useState([]);
+  const [cartItems, setCartItems] = useState('');
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((response) => {
@@ -28,6 +29,7 @@ const App = () => {
 
   function additemtocart(item) {
     alert("Item " + item.title + " added to cart")
+    setCartItems((prevItems) => [...prevItems, item]);
   }
 
   const Home = ({ data, additemtocart }) => {
@@ -80,7 +82,10 @@ const FooterTab = ({username}) => {
                   </div>
                 }/>
                 <Route path="/product/:id" element={<ProductDetail />} />
-                <Route path='Cart' element = {<Cart/>}/>
+                <Route path='Cart' element = {
+                  <Cart
+                  items = {cartItems}
+                  />}/>
                 <Route path='About' element = {<About/>}/>
                 <Route path='ContactUs' element = {<ContactUs/>}/>
                 <Route path = 'UserDetails' element = {<UserDetails/>}/>

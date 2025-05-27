@@ -177,3 +177,15 @@ a{
   color: beige;
   padding: 50px;
 }
+
+.addrembut {
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.addrembut:hover {
+  background-color: #f0f0f0;
+}
