@@ -79,6 +79,10 @@ const EditDetails = ({ username }) => {
       validatePincode(pincode) &&
       validateAddress(address)
     ) {
+
+      const userDetails = {username,email,phone,address,pincode};
+      sessionStorage.setItem('userDetails', JSON.stringify(userDetails));
+
       alert("Form submitted");
       setMessage('');
       setErrors({});
